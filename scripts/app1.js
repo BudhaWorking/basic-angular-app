@@ -1,4 +1,4 @@
-var app=angular.module('myApp', ['ui.router']);   //ngRoute
+var app=angular.module('myApp', ['ngRoute']);
 app.controller('myController', ['$scope', function($scope){
 	
 	$scope.message="Hello Abhishek";
@@ -9,24 +9,24 @@ app.controller('myController', ['$scope', function($scope){
 	$locationProvider.hashPrefix('')
 }])*/
 
-app.config(['$stateProvider','$locationProvider',function($stateProvider,$locationProvider){
+app.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
                 $locationProvider.hashPrefix('')
-	$stateProvider
-	   .state('home',{
-	   		url: "/home",
+	$routeProvider
+	   .when('/',{
+
 	   		templateUrl: "pages/home.html",
 	   		controller:'myHomeController',
 	   		caseInsensitiveMatch: true
 	   })
 
-	   .state('register',{
-	   		url: "/register",
+	   .when('/register',{
+
 	   		templateUrl: "pages/register.html",
 	   		controller:'myRegisterController',
 	   		caseInsensitiveMatch: true
 	   })
-	   .state('login',{
-	   		url: "/login",
+	   .when('/login',{
+
 	   		templateUrl: "pages/login.html",
 	   		controller:'myLoginController',
 	   		caseInsensitiveMatch: true
